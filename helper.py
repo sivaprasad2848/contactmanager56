@@ -1,4 +1,4 @@
-contacts=[]
+contacts=[('sam','sam@gmail.com','723767676'),('amal','amal@gmail.com','65236565')]
 def menu():
     print("Contact Manager")
     print("1->Create New Contact")
@@ -18,7 +18,13 @@ def display_contact():
     for item in contacts:
         print(item[0]+" "+item[1]+" "+item[2])
 def edit_contact():
-    print("This is edit contact")
+    display_contact()
+    i=int(input("Enter the record index you want to Edit "))  
+    name=input("Enter New Name")
+    email=input("Enter New Email")
+    mobile=input("Enter New Mobile")
+    contacts[i]=(name,email,mobile)
+    display_contact()
 
 def delete_contact():
     display_contact()
