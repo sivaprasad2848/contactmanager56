@@ -11,3 +11,5 @@ while(y==0):
     if(op==4):
         delete_contact()
     y=int(input("Do you want to continue?press 0 for Yes"))
+    if(y!=0):
+        save_data()

@@ -1,5 +1,5 @@
 from tabulate import tabulate
-contacts=[('sam','sam@gmail.com','723767676'),('amal','amal@gmail.com','65236565')]
+contacts=[]
 def menu():
     print("Contact Manager")
     print("1->Create New Contact")
@@ -35,3 +35,11 @@ def delete_contact():
     i=int(input("Enter the record index you want to delete "))
     del contacts[i]
     display_contact()
+def save_data():
+    fp=open("data.txt","a")
+    for item in contacts:
+        data=item[0]+"-"+item[1]+"-"+item[2]+"\n"
+        fp.write(data)
+    fp.close()
+
+
